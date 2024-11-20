@@ -1,0 +1,13 @@
+//
+// GLGeometryLib.modulemap
+// GLGeometryLib
+//
+// Created by Sergei Iakovlev on 20.11.2024
+// Copyright © 2024 ___ORGANIZATIONNAME___. All rights reserved.
+//
+
+framework module GLGeometryLib {
+    header "GLGeometryBridge.h"
+
+    export *
+}
