@@ -151,6 +151,9 @@ class GLView: GLKView {
         if renderbuffer != 0 {
             glDeleteRenderbuffers(1, &renderbuffer)
         }
+        if EAGLContext.current() === glContext {
+            EAGLContext.setCurrent(nil)
+        }
     }
 
 }
