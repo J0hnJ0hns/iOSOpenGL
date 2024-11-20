@@ -143,6 +143,15 @@ class GLView: GLKView {
         reshapeFrameBuffer()
         drawGL()
     }
+    
+    deinit {
+        if framebuffer != 0 {
+            glDeleteFramebuffers(1, &framebuffer)
+        }
+        if renderbuffer != 0 {
+            glDeleteRenderbuffers(1, &renderbuffer)
+        }
+    }
 
 }
 
